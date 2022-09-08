@@ -1,0 +1,71 @@
+{
+  "name": "@wei/pi",
+  "type": "module",
+  "version": "0.0.1-beta.0",
+  "packageManager": "pnpm@7.11.0",
+  "description": "The tool to modify craco server port.",
+  "author": "Gaaraly <wayshine67@qq.com>",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/gaaraly",
+  "homepage": "https://github.com/gaaraly/pi#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaaraly/pi.git"
+  },
+  "bugs": "https://github.com/gaaraly/pi/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "bin": {
+    "pi": "bin/pi.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "unbuild --stub",
+    "lint": "eslint .",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.26.3",
+    "@antfu/ni": "^0.17.2",
+    "@antfu/utils": "^0.5.2",
+    "@types/node": "^18.7.16",
+    "@types/prompts": "^2.0.14",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.23.0",
+    "esno": "^0.16.3",
+    "find-up": "^6.3.0",
+    "picocolors": "^1.0.0",
+    "pnpm": "^7.11.0",
+    "prompts": "^2.4.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.2",
+    "unbuild": "^0.8.10",
+    "vite": "^3.1.0",
+    "vitest": "^0.22.1"
+  }
+}
