@@ -1,6 +1,10 @@
-# pkg-name
+# pi
 
-[![NPM version](https://img.shields.io/npm/v/pkg-name?color=a1b858&label=)](https://www.npmjs.com/package/pkg-name)
+pi - choose the server you want to connect
+
+```bash
+pnpm i -g @wei/pi
+```
 
 ## Sponsors
 
