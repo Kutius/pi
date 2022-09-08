@@ -1,5 +1,5 @@
 {
-  "name": "@wei/pi",
+  "name": "craco-pi",
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@7.11.0",
