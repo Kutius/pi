@@ -1,7 +1,7 @@
 {
   "name": "craco-pi",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "pnpm@7.11.0",
   "description": "The tool to modify craco server port.",
   "author": "Gaaraly <wayshine67@qq.com>",
