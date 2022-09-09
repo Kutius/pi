@@ -16,4 +16,4 @@ pnpm i -g craco-pi
 
 ## License
 
-<!-- [MIT](./LICENSE) License © 2022 [Anthony Fu](https://github.com/antfu) -->
+[MIT](./LICENSE) License © 2022 [今夜白](https://github.com/gaaraly)
