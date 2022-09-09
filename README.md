@@ -3,7 +3,7 @@
 pi - choose the server you want to connect
 
 ```bash
-pnpm i -g @wei/pi
+pnpm i -g craco-pi
 ```
 
 ## Sponsors
