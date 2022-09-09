@@ -4,6 +4,8 @@ import { regex } from './detect'
 
 type writeConfig = (path: string, ip: string) => void
 
+const IP_PREFIX = '192.168'
+
 export function getCracoConfig(cwd = process.cwd()) {
   const path = cwd
 
@@ -45,6 +47,6 @@ export function writeCracoConfig(cwd = process.cwd(), ip: string) {
 }
 
 export const writeShortcut: writeConfig = (cwd, shortIP) => {
-  const ip = `192.168.${shortIP}`
+  const ip = `${IP_PREFIX}.${shortIP}`
   return writeCracoConfig(cwd, ip)
 }

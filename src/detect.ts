@@ -1,4 +1,5 @@
 import { findUp } from 'find-up'
+import c from 'picocolors'
 import { getCracoConfig } from './fs'
 
 export const regex
@@ -16,6 +17,9 @@ export async function detect(cwd: string) {
     console.warn('Failed to find craco.config.js')
     process.exit(0)
   }
+
+  // eslint-disable-next-line no-console
+  console.log('Detected ip:', c.blue(ip))
 
   return { ip, cracoConfigPath }
 }
