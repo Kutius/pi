@@ -1,9 +1,9 @@
 import c from 'picocolors'
 import { version } from '../package.json'
-import { run } from './cli'
+import { run, select } from './cli'
 import { getConfig, writeConfig } from './config'
 import { detect, isValidIP } from './detect'
-import { writeShortcut } from './fs'
+import { IP_PREFIX, writeShortcut } from './fs'
 
 export const parse = async (args: string[]) => {
   if (args.length === 0)
@@ -15,12 +15,16 @@ export const parse = async (args: string[]) => {
     process.exit(0)
   }
 
+  // select ip autocomplete
+  if (args.length === 1 && args[0] === '-s')
+    select()
+
   if (args.length === 2 && args[0] === '-i') {
     const inserts = args[1]
 
     if (isValidIP(inserts, true)) {
       const config = getConfig()
-      config.ipChoices.push(inserts)
+      config.ipChoices.push(`${IP_PREFIX}.${inserts}`)
 
       const { cracoConfigPath } = await detect(process.cwd())
 
